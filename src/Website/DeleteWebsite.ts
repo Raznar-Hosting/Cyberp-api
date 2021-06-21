@@ -5,9 +5,9 @@ export default async function DeleteWebsite(request: IRequest, domainName: strin
         const response = await request("/api/deleteWebsite", {
             method: "POST",
             body: JSON.stringify({
-                "domainName": "cyberpanel.net"
+                "domainName": domainName
             })
-        })
+        });
         return response.status == 200;
     } catch (e) {
         throw new Error(e);
