@@ -10,7 +10,13 @@
     "allowJs": true,
     "pretty": true,
     "outDir": "./dist"
+    
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "typeAcquisition": {
+    "include": [
+        "jest"
+    ]
+  },
+  "include": ["src/**/*", "tests/*"],
+  "exclude": ["node_modules", ".yarn"],
 }
